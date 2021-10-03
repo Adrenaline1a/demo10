@@ -13,10 +13,11 @@ def get_worker():
     year = int(input("Год поступления? "))
     # Создать словарь.
     return {
-    'name': name,
-    'post': post,
-    'year': year,
+        'name': name,
+        'post': post,
+        'year': year,
     }
+
 
 def display_workers(workers):
     """
@@ -26,34 +27,35 @@ def display_workers(workers):
     if workers:
         # Заголовок таблицы.
         line = '+-{}-+-{}-+-{}-+-{}-+'.format(
-        '-' * 4,
-        '-' * 30,
-        '-' * 20,
-        '-' * 8
+            '-' * 4,
+            '-' * 30,
+            '-' * 20,
+            '-' * 8
         )
         print(line)
         print(
-        '| {:^4} | {:^30} | {:^20} | {:^8} |'.format(
-        "No",
-        "Ф.И.О.",
-        "Должность",
-        "Год"
-        )
+            '| {:^4} | {:^30} | {:^20} | {:^8} |'.format(
+                "No",
+                "Ф.И.О.",
+                "Должность",
+                "Год"
+            )
         )
         print(line)
         # Вывести данные о всех сотрудниках.
         for idx, worker in enumerate(workers, 1):
             print(
-            '| {:>4} | {:<30} | {:<20} | {:>8} |'.format(
-                idx,
-                worker.get('name', ''),
-                worker.get('post', ''),
-                worker.get('year', 0)
+                '| {:>4} | {:<30} | {:<20} | {:>8} |'.format(
+                    idx,
+                    worker.get('name', ''),
+                    worker.get('post', ''),
+                    worker.get('year', 0)
+                )
             )
-        )
             print(line)
     else:
         print("Список работников пуст.")
+
 
 def select_workers(staff, period):
     """
@@ -68,6 +70,7 @@ def select_workers(staff, period):
             result.append(employee)
     # Возвратить список выбранных работников.
     return result
+
 
 def main():
     """
@@ -112,6 +115,7 @@ def main():
             print("exit - завершить работу с программой.")
         else:
             print(f"Неизвестная команда {command}", file=sys.stderr)
+
 
 if __name__ == '__main__':
     main()
