@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
 def test_input(message):
     try:
         str_to_int(message)
     except ValueError:
-        print('Нельзя преобразовать в число')
+        print('Нельзя преобразовать в целое число')
 
 
 def str_to_int(message):
@@ -23,4 +24,5 @@ def get_input():
 
 
 if __name__ == '__main__':
-    get_input()
+    while True:
+        get_input()

@@ -3,15 +3,15 @@
 
 
 def main():
-    summ = 1
+    composition = 1
     while True:
         message = int(input("Введите число: "))
-        summ *= message
-        if summ == 0:
+        composition *= message
+        if composition == 0:
             print('Произведение равно 0')
             break
         else:
-            print(f'Полчившееся прозведение: {summ}')
+            print(f'Полчившееся прозведение: {composition}')
 
 
 if __name__ == '__main__':
